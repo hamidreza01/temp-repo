@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ff6f61"> 
+    <title>🎉 جشن تولد ماهور 🎉</title>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Vazir, Tahoma, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            direction: rtl;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #ff6f61; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2s ease-in-out;
+        }
+        p {
+            font-size: 1.2rem;
+            line-height: 2rem;
+            color: #444;
+            animation: slideIn 3s ease-in-out;
+        }
+        .container {
+            max-width: 600px;
+            width: 90%;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .balloon {
+            width: 80px;
+            height: 120px;
+            background: #ff6f61;
+            border-radius: 50%;
+            position: absolute;
+            bottom: -200px;
+            animation: float 6s ease-in-out infinite;
+        }
+        .balloon:nth-child(2) {
+            background: #ffcc5c;
+            left: 20%;
+            animation-delay: 1s;
+        }
+        .balloon:nth-child(3) {
+            background: #88d8b0;
+            left: 40%;
+            animation-delay: 2s;
+        }
+        .balloon:nth-child(4) {
+            background: #96ceb4;
+            left: 60%;
+            animation-delay: 3s;
+        }
+        .balloon:nth-child(5) {
+            background: #ff6f61;
+            left: 80%;
+            animation-delay: 4s;
+        }
+        @keyframes float {
+            0% { bottom: -200px; }
+            50% { bottom: 100%; }
+            100% { bottom: -200px; }
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @keyframes slideIn {
+            0% { transform: translateY(100%); }
+            100% { transform: translateY(0); }
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1rem;
+                line-height: 1.8rem;
+            }
+            .balloon {
+                width: 60px;
+                height: 90px;
+            }
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 تولدت مبارک ماهور! 🎉</h1>
+        <p>
+            سلام به همه دوستای خوبم!<br>
+            امسال هم می‌خوام جشن تولدم رو با شما برگزار کنم. روز <strong>۴ ام بهمن</strong>، از ساعت <strong>۴ تا ۷ عصر</strong>، منتظرتون هستم.<br>
+            بیایید تا با هم خوش بگذرونیم و یه روز قشنگ رو کنار هم بسازیم.<br>
+            جای شما تو این جشن خالیه، پس حتماً بیایید! 🎂🎈<br>
+            منتظرتون هستم! 😊<br>
+            ماهور
+        </p>
+    </div>
+
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+
+    <audio autoplay loop controls style="display: none;">
+        <source src="https://assets.mixkit.co/music/preview/mixkit-happy-birthday-to-you-528.mp3" type="audio/mpeg">
+        مرورگر شما از پخش موزیک پشتیبانی نمی‌کند.
+    </audio>
+</body>
+</html>
