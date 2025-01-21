@@ -26,13 +26,11 @@
             margin-bottom: 20px;
             color: #ff6f61; 
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            animation: fadeIn 2s ease-in-out;
         }
         p {
             font-size: 1.2rem;
             line-height: 2rem;
             color: #444;
-            animation: slideIn 3s ease-in-out;
         }
         .container {
             max-width: 600px;
@@ -42,63 +40,18 @@
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
-        .balloon {
-            width: 80px;
-            height: 120px;
+        button {
+            padding: 10px 20px;
             background: #ff6f61;
-            border-radius: 50%;
-            position: absolute;
-            bottom: -200px;
-            animation: float 6s ease-in-out infinite;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 20px;
         }
-        .balloon:nth-child(2) {
-            background: #ffcc5c;
-            left: 20%;
-            animation-delay: 1s;
-        }
-        .balloon:nth-child(3) {
-            background: #88d8b0;
-            left: 40%;
-            animation-delay: 2s;
-        }
-        .balloon:nth-child(4) {
-            background: #96ceb4;
-            left: 60%;
-            animation-delay: 3s;
-        }
-        .balloon:nth-child(5) {
-            background: #ff6f61;
-            left: 80%;
-            animation-delay: 4s;
-        }
-        @keyframes float {
-            0% { bottom: -200px; }
-            50% { bottom: 100%; }
-            100% { bottom: -200px; }
-        }
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-        @keyframes slideIn {
-            0% { transform: translateY(100%); }
-            100% { transform: translateY(0); }
-        }
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2rem;
-            }
-            p {
-                font-size: 1rem;
-                line-height: 1.8rem;
-            }
-            .balloon {
-                width: 60px;
-                height: 90px;
-            }
-            .container {
-                padding: 15px;
-            }
+        button:hover {
+            background: #e85c50;
         }
     </style>
 </head>
@@ -113,16 +66,18 @@
             منتظرتون هستم! 😊<br>
             ماهور
         </p>
+        <button onclick="playAudio()">پخش صدا 🎵</button>
     </div>
 
-    <div class="balloon"></div>
-    <div class="balloon"></div>
-    <div class="balloon"></div>
-    <div class="balloon"></div>
-    <div class="balloon"></div>
-
-    <audio autoplay loop controls style="display: none;">
+    <audio id="audio" style="display: none;" loop>
         <source src="file.wav" type="audio/wav">
     </audio>
+
+    <script>
+        function playAudio() {
+            const audio = document.getElementById("audio");
+            audio.play();
+        }
+    </script>
 </body>
 </html>
